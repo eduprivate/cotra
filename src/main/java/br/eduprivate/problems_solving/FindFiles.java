@@ -1,4 +1,4 @@
-package com.problems_solving;
+package br.eduprivate.problems_solving;
 //you can also use imports, for example:
 
 import java.io.BufferedReader;

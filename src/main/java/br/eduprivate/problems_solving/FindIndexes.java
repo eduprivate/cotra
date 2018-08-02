@@ -1,4 +1,4 @@
-package com.problems_solving;
+package br.eduprivate.problems_solving;
 
 public class FindIndexes {
 	public int solution(int[] A) {

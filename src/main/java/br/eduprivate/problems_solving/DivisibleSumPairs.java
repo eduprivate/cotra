@@ -1,4 +1,4 @@
-package com.problems_solving;
+package br.eduprivate.problems_solving;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

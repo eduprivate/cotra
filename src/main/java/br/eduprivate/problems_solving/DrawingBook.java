@@ -1,4 +1,4 @@
-package com.problems_solving;
+package br.eduprivate.problems_solving;
 
 import java.io.*;
 import java.math.*;
@@ -22,25 +22,23 @@ public class DrawingBook {
                 break;
             }
         }
+        
         int fromEnd = -1;
-        for (int i = book.length; i >= 0; i-=2) {
-        	if (n % 2 == 0 && i == n) {
-        		if (!(p == i)) {
-                    fromEnd++;
-                }
-                if ((p == i)) {
-                	fromEnd=0;
-                    break;
-                }
-        	} 
-        	else if (!(p == i) || !(p == i-1)) {
-                fromEnd++;
+        int bookLength = (n % 2 == 0) ? book.length + 1 : book.length;
+        for (int i = bookLength; i >= 0; i-=2) {
+        	if (n % 2 == 0 && n == p) {
+        		return 0;
+        	}
+        	
+        	if (!(p == i) && !(p == i-1)) {
+        		fromEnd++;
             }
             if ((p == i) || (p == i-1)) {
             	fromEnd++;
                 break;
             }
         }
+        
         
         if (fromBegin <= fromEnd) {
             return fromBegin;
