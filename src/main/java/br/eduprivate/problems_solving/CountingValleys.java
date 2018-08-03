@@ -10,7 +10,6 @@ import java.util.regex.*;
 
 public class CountingValleys {
 
-    // Complete the countingValleys function below.
     static int countingValleys(int n, String s) {
 
     	return 0;
