@@ -12,7 +12,26 @@ public class CountingValleys {
 
     static int countingValleys(int n, String s) {
 
-    	return 0;
+    	char[] steps = s.toCharArray();
+    	
+    	int countValey = 0;
+    	int level = 0;
+    	boolean inValley = false;
+    	for (int i = 0; i < steps.length; i++) {
+			if (steps[i] == 'D') {
+				level--;
+			} else {
+				level++;
+			}
+			
+			if (!inValley && level<0) {
+				inValley = true;
+				countValey++;
+			} else if (level >= 0) {
+				inValley = false;
+			} 
+		}
+    	return countValey;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
