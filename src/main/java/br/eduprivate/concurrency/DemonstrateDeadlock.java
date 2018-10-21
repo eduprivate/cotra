@@ -1,6 +1,10 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.Random;
+
+import br.eduprivate.concurrency.DeadlockAvoidance.Account;
+import br.eduprivate.concurrency.DynamicOrderDeadlock.DollarAmount;
+
 
 /**
  * DemonstrateDeadlock
@@ -18,7 +22,7 @@ public class DemonstrateDeadlock {
         final Account[] accounts = new Account[NUM_ACCOUNTS];
 
         for (int i = 0; i < accounts.length; i++)
-            accounts[i] = new Account();
+            accounts[i] = null;//new br.eduprivate.concurrency.DeadlockAvoidance();
 
         class TransferThread extends Thread {
             public void run() {
@@ -26,10 +30,10 @@ public class DemonstrateDeadlock {
                     int fromAcct = rnd.nextInt(NUM_ACCOUNTS);
                     int toAcct = rnd.nextInt(NUM_ACCOUNTS);
                     DollarAmount amount = new DollarAmount(rnd.nextInt(1000));
-                    try {
+                    /*try {
                         DynamicOrderDeadlock.transferMoney(accounts[fromAcct], accounts[toAcct], amount);
                     } catch (DynamicOrderDeadlock.InsufficientFundsException ignored) {
-                    }
+                    }*/
                 }
             }
         }

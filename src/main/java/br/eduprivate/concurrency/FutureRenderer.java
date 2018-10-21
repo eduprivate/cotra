@@ -42,7 +42,7 @@ public abstract class FutureRenderer {
             // We don't need the result, so cancel the task too
             future.cancel(true);
         } catch (ExecutionException e) {
-            throw launderThrowable(e.getCause());
+            //throw new Throwable(e.getCause());
         }
     }
 
