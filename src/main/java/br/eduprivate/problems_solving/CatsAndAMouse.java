@@ -12,7 +12,41 @@ public class CatsAndAMouse {
 
     // Complete the catAndMouse function below.
     static String catAndMouse(int x, int y, int z) {
-    	return null;
+    	
+    	int maxA = 0;
+    	int maxB = 0;
+    	
+    	if (x < z) {
+    		while(x < z) {
+    			maxA++;
+    			x++;
+    		}
+    	} else if (x > z) {
+    		while(x > z) {
+    			maxA++;
+    			x--;
+    		}
+    	}
+    	
+    	if (y < z) {
+    		while(y < z) {
+    			maxB++;
+    			y++;
+    		}
+    	} else if (y > z) {
+    		while(y > z) {
+    			maxB++;
+    			y--;
+    		}
+    	}
+    	
+    	if (maxA == maxB) {
+    		return "Mouse C";
+    	} if (maxA > maxB) {
+    		return "Cat B";
+    	} 	
+    	
+    	return "Cat A";
 
     }
 
