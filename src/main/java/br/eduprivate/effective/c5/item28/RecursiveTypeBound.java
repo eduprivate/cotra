@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item28;
 // Using a recursive type bound with wildcards - Page 138-139
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class RecursiveTypeBound {
     public static <T extends Comparable<? super T>> T max(

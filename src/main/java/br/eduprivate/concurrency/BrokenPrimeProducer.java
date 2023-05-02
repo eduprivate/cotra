@@ -1,7 +1,7 @@
 package br.eduprivate.concurrency;
 
 import java.math.BigInteger;
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
 
 /**
  * BrokenPrimeProducer

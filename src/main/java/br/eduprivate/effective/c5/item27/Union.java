@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item27;
 // Generic union method and program to exercise it - pages 129 - 130
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Union {
 

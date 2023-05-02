@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c8.item48;
 // Avoid float and double if exact answers are required!! - Page 48
 
-import java.math.*;
+import java.math.BigDecimal;
 
 public class Arithmetic {
     public static void main(String[] args) {

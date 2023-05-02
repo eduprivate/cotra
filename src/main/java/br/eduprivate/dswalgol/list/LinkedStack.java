@@ -20,11 +20,8 @@ public class LinkedStack implements Stack {
 
 	@Override
 	public boolean isEmpty() {
-		if (top == null) {
-			return true;
-		}
-		return false;
-	}
+        return top == null;
+    }
 
 	@Override
 	public Object top() throws StackEmptyException {

@@ -1,6 +1,7 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.List;
 
 
 /**

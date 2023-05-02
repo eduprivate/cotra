@@ -5,7 +5,7 @@ import br.eduprivate.dswalgol.stack.StackEmptyException;
 
 public class DequeStack implements Stack {
 	
-	private Deque D;
+	private final Deque D;
 	
 	public DequeStack() {
 		D = new MyDeque();

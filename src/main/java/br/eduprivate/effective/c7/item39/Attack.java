@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c7.item39;
 // Two attacks on the internals of an "immutable" period
 
-import java.util.*;
+import java.util.Date;
 
 public class Attack {
     public static void main(String[] args) {

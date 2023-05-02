@@ -1,10 +1,9 @@
 package br.eduprivate.problems_solving;
 
-import java.io.*;
-import java.math.*;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class BetweenTwoSets {
 	static int lcm(int[] b, int n) {
@@ -20,7 +19,7 @@ public class BetweenTwoSets {
 		return gcd(b % a, a);
 	}
 
-	static int findGCD(int b[], int n) {
+	static int findGCD(int[] b, int n) {
 		int result = b[0];
 		for (int i = 1; i < n; i++)
 			result = gcd(b[i], result);

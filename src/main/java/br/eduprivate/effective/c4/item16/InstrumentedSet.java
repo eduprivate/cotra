@@ -1,7 +1,10 @@
 package br.eduprivate.effective.c4.item16;
 // Wrapper class - uses composition in place of inheritance - Page 84
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 public class InstrumentedSet<E> extends ForwardingSet<E> {
     private int addCount = 0;

@@ -5,7 +5,7 @@ import br.eduprivate.dswalgol.stack.Stack;
 
 public class ComputeSpans {
 	
-	public void computeDailyHightSpan(Quote Q[]) {
+	public void computeDailyHightSpan(Quote[] Q) {
 		int prevHigh;
 		Stack D = new ArrayStack();
 		for (int i = 0; i < Q.length; i++) {

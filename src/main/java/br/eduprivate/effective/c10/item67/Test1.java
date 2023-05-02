@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c10.item67;
 // Simple test of ObservableSet - Page 266
 
-import java.util.*;
+import java.util.HashSet;
 
 public class Test1 {
     public static void main(String[] args) {

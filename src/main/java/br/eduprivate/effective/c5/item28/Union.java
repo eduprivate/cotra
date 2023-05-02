@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c5.item28;
 // Generic union method with wildcard types - Pages 137-138
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Union {
 

@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c11.item78;
 // Bogus Period attack - Page 303
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 
 public class BogusPeriod {
     // Byte stream could not have come from real Period instance!

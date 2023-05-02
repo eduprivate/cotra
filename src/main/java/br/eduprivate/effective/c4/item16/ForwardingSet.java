@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c4.item16;
 // Reusable forwarding class - Page 84
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.Set;
 
 public class ForwardingSet<E> implements Set<E> {
     private final Set<E> s;

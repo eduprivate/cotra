@@ -39,7 +39,8 @@ public class NRTLucene {
         //=========================================================
         // This thread handles the actual reader reopening.
         //=========================================================
-        ControlledRealTimeReopenThread<IndexSearcher> nrtReopenThread = new ControlledRealTimeReopenThread<IndexSearcher>(
+        @SuppressWarnings("resource")
+		ControlledRealTimeReopenThread<IndexSearcher> nrtReopenThread = new ControlledRealTimeReopenThread<IndexSearcher>(
             null, searcherManager, 1.0, 0.1);
         nrtReopenThread.setName("NRT Reopen Thread");
         nrtReopenThread.setPriority(Math.min(Thread.currentThread().getPriority() + 2, Thread.MAX_PRIORITY));

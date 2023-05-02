@@ -7,7 +7,7 @@ package br.eduprivate.concurrency;
  *
  */
 class UnsafeStates {
-    private String[] states = new String[]{
+    private final String[] states = new String[]{
         "AK", "AL" /*...*/
     };
 

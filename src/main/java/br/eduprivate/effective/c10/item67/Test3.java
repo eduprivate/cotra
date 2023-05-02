@@ -1,8 +1,10 @@
 package br.eduprivate.effective.c10.item67;
 // Perverse test of ObservableSet - bottom of Page 267
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.HashSet;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Test3 {
     public static void main(String[] args) {

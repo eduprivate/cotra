@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c6.item33;
 // Using a nested EnumMap to associate data with enum pairs - Pags 163-164
 
-import java.util.*;
+import java.util.EnumMap;
+import java.util.Map;
 
 public enum Phase {
    SOLID, LIQUID, GAS;

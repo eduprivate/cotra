@@ -1,6 +1,6 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
+import java.util.concurrent.CyclicBarrier;
 
 /**
  * TimedPutTakeTest
@@ -9,7 +9,7 @@ import java.util.concurrent.*;
  *
  */
 public class TimedPutTakeTest extends PutTakeTest {
-    private BarrierTimer timer = new BarrierTimer();
+    private final BarrierTimer timer = new BarrierTimer();
 
     public TimedPutTakeTest(int cap, int pairs, int trials) {
         super(cap, pairs, trials);

@@ -2,9 +2,8 @@ package br.eduprivate.effective.c2.item1;
 // Service provider framework sketch
 
 // Noninstantiable class for service registration and access - Pages 8-9
-
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class Services {
     private Services() { }  // Prevents instantiation (Item 4)

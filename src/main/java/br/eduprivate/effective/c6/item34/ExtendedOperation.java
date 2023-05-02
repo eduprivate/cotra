@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c6.item34;
 // Emulated extension enum - Page 166-167
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
 
 public enum ExtendedOperation implements Operation {
     EXP("^") {

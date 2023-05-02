@@ -5,7 +5,7 @@ public enum FigureFactory {
 	RECTANGLE(new Rectangle(0.0, 0.0)),
 	SQUARE(new Square(0.0));
 	
-	private Figure figure;
+	private final Figure figure;
 	
 	FigureFactory(Figure figure){
 		this.figure = figure;

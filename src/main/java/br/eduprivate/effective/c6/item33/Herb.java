@@ -1,7 +1,10 @@
 package br.eduprivate.effective.c6.item33;
 // Using an EnumMap to associate data with an enum - Pages 161-162
 
-import java.util.*;
+import java.util.EnumMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 // Simplistic class representing a culinary herb - Page 161
 public class Herb {

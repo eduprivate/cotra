@@ -1,8 +1,10 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
-import static java.util.concurrent.Executors.newScheduledThreadPool;
 import static br.eduprivate.concurrency.LaunderThrowable.launderThrowable;
+import static java.util.concurrent.Executors.newScheduledThreadPool;
+
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 /**
  * TimedRun2

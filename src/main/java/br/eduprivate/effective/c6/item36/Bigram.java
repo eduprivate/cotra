@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c6.item36;
 // Can you spot the bug? - Page 176
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Bigram {
     private final char first;

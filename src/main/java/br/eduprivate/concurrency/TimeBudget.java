@@ -1,7 +1,18 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
 /**
  * QuoteTask
@@ -10,7 +21,7 @@ import java.util.concurrent.*;
  *
  */
 public class TimeBudget {
-    private static ExecutorService exec = Executors.newCachedThreadPool();
+    private static final ExecutorService exec = Executors.newCachedThreadPool();
 
     public List<TravelQuote> getRankedTravelQuotes(TravelInfo travelInfo, Set<TravelCompany> companies,
                                                    Comparator<TravelQuote> ranking, long time, TimeUnit unit)

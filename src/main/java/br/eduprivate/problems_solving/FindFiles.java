@@ -63,14 +63,10 @@ class FindFiles {
 	}
 
 	public boolean checkFileSize(String size) {
-		long MAX_SIZE = 2097152l;
+		long MAX_SIZE = 2097152L;
 		long fileSize = fileSize(size);
 
-		if (fileSize < MAX_SIZE) {
-			return true;
-		} else {
-			return false;
-		}
+        return fileSize < MAX_SIZE;
 	}
 
 	public long fileSize(String size) {

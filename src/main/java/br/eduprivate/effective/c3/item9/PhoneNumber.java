@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c3.item9;
 // Shows the need for overriding hashcode when you override equals - Pages 45-46
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class PhoneNumber {
     private final short areaCode;

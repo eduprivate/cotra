@@ -1,5 +1,5 @@
 package br.eduprivate.effective.c4.item17;
-import java.util.*;
+import java.util.Date;
 
 public final class Sub extends Super {
     private final Date date; // Blank final, set by constructor

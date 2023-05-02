@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item28;
 // List-based generic reduction with wildcard type - Page 136
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Reduction {
     // Wildcard type for parameter that serves as an E producer

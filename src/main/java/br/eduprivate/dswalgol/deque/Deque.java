@@ -2,19 +2,19 @@ package br.eduprivate.dswalgol.deque;
 
 public interface Deque {
 	
-	public void insertFirst(Object e);
+	void insertFirst(Object e);
 	
-	public void insertLast(Object e);
+	void insertLast(Object e);
 	
-	public Object removeFirst();
+	Object removeFirst();
 	
-	public Object removeLast();
+	Object removeLast();
 	
-	public Object first();
+	Object first();
 	
-	public Object last();
+	Object last();
 	
-	public int size();
+	int size();
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 }

@@ -3,7 +3,11 @@
   <groupId>br.eduprivate</groupId>
   <artifactId>cotra</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <dependencies>
+	<properties>
+		<maven.compiler.source>19</maven.compiler.source>
+		<maven.compiler.target>19</maven.compiler.target>
+	</properties>
+	<dependencies>
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>

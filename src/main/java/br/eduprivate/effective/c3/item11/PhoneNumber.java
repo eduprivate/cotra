@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c3.item11;
 // Adding a clone method to PhoneNumber - page 55
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class PhoneNumber implements Cloneable {
     private final short areaCode;

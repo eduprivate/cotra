@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c4.item16;
 // Broken - Inappropriate use of inheritance!
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
 
 public class InstrumentedHashSet<E> extends HashSet<E> {
     // The number of attempted element insertions

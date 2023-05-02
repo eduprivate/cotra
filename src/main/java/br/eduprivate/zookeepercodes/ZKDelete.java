@@ -1,7 +1,7 @@
 package br.eduprivate.zookeepercodes;
 
-import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.KeeperException;
+import org.apache.zookeeper.ZooKeeper;
 
 public class ZKDelete {
    private static ZooKeeper zk;

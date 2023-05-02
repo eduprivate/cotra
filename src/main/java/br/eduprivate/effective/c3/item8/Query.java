@@ -2,8 +2,8 @@ package br.eduprivate.effective.c3.item8;
 
 class Query {
 	
-	private String query;
-	private String index;
+	private final String query;
+	private final String index;
 	
 	public Query(String query, String index) {
 		super();
@@ -51,11 +51,8 @@ class Query {
 		} else if (!index.equals(other.index))
 			return false;
 		if (query == null) {
-			if (other.query != null)
-				return false;
-		} else if (!query.equals(other.query))
-			return false;
-		return true;
+			return other.query == null;
+		} else return query.equals(other.query);
 	}
 	
 	

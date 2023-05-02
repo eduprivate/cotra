@@ -2,7 +2,7 @@ package br.eduprivate.dp.singleton;
 
 
 public class Singleton2 {
-	private static Singleton2 uniqueInstance = new Singleton2();
+	private static final Singleton2 uniqueInstance = new Singleton2();
 	
 	private Singleton2() {
 	}

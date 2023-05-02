@@ -4,9 +4,9 @@ public class ArrayQueue implements Queue {
 	
 public static final int CAPACITY = 1000;
 	
-	private int capacity;
+	private final int capacity;
 	
-	private Object S[];
+	private final Object[] S;
 	
 	private int f, r = -1;
 	

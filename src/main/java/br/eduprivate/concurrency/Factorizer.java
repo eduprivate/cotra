@@ -1,7 +1,11 @@
 package br.eduprivate.concurrency;
 
 import java.math.BigInteger;
-import javax.servlet.*;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * Factorizer

@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item28;
 // Generic stack with bulk methods using wildcard types - 
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 
 public class Stack<E> {
     private E[] elements;

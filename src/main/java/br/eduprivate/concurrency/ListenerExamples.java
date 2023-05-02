@@ -1,18 +1,22 @@
 package br.eduprivate.concurrency;
 
-import java.awt.*;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
-import java.util.concurrent.*;
-import javax.swing.*;
+import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  * ListenerExamples
  *
  */
 public class ListenerExamples {
-    private static ExecutorService exec = Executors.newCachedThreadPool();
+    private static final ExecutorService exec = Executors.newCachedThreadPool();
 
     private final JButton colorButton = new JButton("Change color");
     private final Random random = new Random();
@@ -98,7 +102,6 @@ public class ListenerExamples {
 
                     });
                 }
-                ;
             }
         });
 

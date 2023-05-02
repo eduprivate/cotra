@@ -2,14 +2,14 @@ package br.eduprivate.dswalgol.stack;
 
 public interface Stack {
 	
-	public int size();
+	int size();
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	public Object top() throws StackEmptyException;
+	Object top() throws StackEmptyException;
 	
-	public void push(Object element);
+	void push(Object element);
 	
-	public Object pop() throws StackEmptyException;
+	Object pop() throws StackEmptyException;
 	
 }

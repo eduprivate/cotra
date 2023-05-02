@@ -1,8 +1,9 @@
 package br.eduprivate.effective.c2.item5.fastversion;
 
 // Doesn't creates unnecessary duplicate objects - page 21
-
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.TimeZone;
 
 class Person {
     private final Date birthDate;

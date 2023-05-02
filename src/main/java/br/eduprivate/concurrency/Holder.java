@@ -7,14 +7,14 @@ package br.eduprivate.concurrency;
  *
  */
 public class Holder {
-    private int n;
+    private final int n;
 
     public Holder(int n) {
         this.n = n;
     }
 
     public void assertSanity() {
-        if (n != n)
+        if (n != 0)
             throw new AssertionError("This statement is false.");
     }
 }

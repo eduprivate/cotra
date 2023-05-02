@@ -1,11 +1,12 @@
 package br.eduprivate.effective.c5.item29;
 // Typesafe heterogeneous container - Pages 142-145
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Favorites {
     // Typesafe heterogeneous container pattern - implementation
-    private Map<Class<?>, Object> favorites = 
+    private final Map<Class<?>, Object> favorites =
         new HashMap<Class<?>, Object>();
 
     public <T> void putFavorite(Class<T> type, T instance) {

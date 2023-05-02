@@ -53,7 +53,7 @@ public class BonAppetit {
 
         String result = solve(ar, item, charged);
 
-        bufferedWriter.write(String.valueOf(result));
+        bufferedWriter.write(result);
         bufferedWriter.newLine();
 
         bufferedWriter.close();

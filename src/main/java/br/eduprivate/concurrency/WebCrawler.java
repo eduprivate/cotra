@@ -1,11 +1,15 @@
 package br.eduprivate.concurrency;
 
-import java.net.URL;
-import java.util.*;
-import java.util.concurrent.*;
-
-
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
+
+import java.net.URL;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * WebCrawler
@@ -59,7 +63,7 @@ public abstract class WebCrawler {
             this.url = url;
         }
 
-        private int count = 1;
+        private final int count = 1;
 
         boolean alreadyCrawled() {
             return seen.putIfAbsent(url, true) != null;

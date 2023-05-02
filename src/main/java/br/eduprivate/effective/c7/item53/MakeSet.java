@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c7.item53;
 // Reflective instantiation with interface access - Page 231
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Set;
 
 public class MakeSet {
     public static void main(String[] args) {

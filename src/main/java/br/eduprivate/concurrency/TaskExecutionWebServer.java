@@ -3,7 +3,8 @@ package br.eduprivate.concurrency;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.concurrent.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 /**
  * TaskExecutionWebServer
@@ -17,7 +18,7 @@ public class TaskExecutionWebServer {
             = Executors.newFixedThreadPool(NTHREADS);
 
     public static void main(String[] args) throws IOException {
-        ServerSocket socket = new ServerSocket(80);
+        ServerSocket socket = new ServerSocket(8080);
         while (true) {
             final Socket connection = socket.accept();
             Runnable task = new Runnable() {

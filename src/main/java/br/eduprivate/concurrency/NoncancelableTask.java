@@ -1,6 +1,6 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
 
 /**
  * NoncancelableTask

@@ -2,7 +2,14 @@ package br.eduprivate.concurrency;
 
 import java.io.IOException;
 import java.net.Socket;
-import java.util.concurrent.*;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.RejectedExecutionHandler;
+import java.util.concurrent.RunnableFuture;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -29,7 +36,8 @@ public abstract class SocketUsingTask <T> implements CancellableTask<T> {
 
     public RunnableFuture<T> newTask() {
         return new FutureTask<T>(this) {
-            public boolean cancel(boolean mayInterruptIfRunning) {
+            @SuppressWarnings("finally")
+			public boolean cancel(boolean mayInterruptIfRunning) {
                 try {
                     SocketUsingTask.this.cancel();
                 } finally {

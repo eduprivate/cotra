@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c6.item32;
 // EnumSet - a modern replacement for bit fields - Page 160
 
-import java.util.*;
+import java.util.EnumSet;
+import java.util.Set;
 
 public class Text {
     public enum Style { BOLD, ITALIC, UNDERLINE, STRIKETHROUGH }

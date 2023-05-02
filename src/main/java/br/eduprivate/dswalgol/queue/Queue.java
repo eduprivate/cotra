@@ -2,13 +2,13 @@ package br.eduprivate.dswalgol.queue;
 
 public interface Queue {
 	
-	public int size();
+	int size();
 	
-	public boolean isEmpty();
+	boolean isEmpty();
 	
-	public Object front() throws QueueEmptyException;
+	Object front() throws QueueEmptyException;
 	
-	public void enqueue(Object element);
+	void enqueue(Object element);
 	
-	public Object dequeue() throws QueueEmptyException;
+	Object dequeue() throws QueueEmptyException;
 }

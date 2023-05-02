@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c10.item69;
 // Simple framework for timing concurrent execution
 
-import java.util.concurrent.*;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.Executor;
 
 public class ConcurrentTimer {
     private ConcurrentTimer() { } // Noninstantiable

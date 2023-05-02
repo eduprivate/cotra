@@ -1,13 +1,14 @@
 package br.eduprivate.effective.c6.item35;
 // Program containing annotations with a parameter - Page 172
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Sample2 {
     @ExceptionTest(ArithmeticException.class)
     public static void m1() {  // Test should pass
         int i = 0;
-        i = i / i;
+        i = 1;
     }
     @ExceptionTest(ArithmeticException.class)
     public static void m2() {  // Should fail (wrong exception)

@@ -1,8 +1,12 @@
 package br.eduprivate.concurrency;
 
 import java.math.BigInteger;
-import java.util.concurrent.atomic.*;
-import javax.servlet.*;
+import java.util.concurrent.atomic.AtomicLong;
+
+import javax.servlet.GenericServlet;
+import javax.servlet.Servlet;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 
 /**
  * CountingFactorizer

@@ -4,10 +4,10 @@ package br.eduprivate.effective.c2.item2.builder;
 public class Query {
 	
 	private Long id;
-	private String name;
-	private String value;
-	private String filter;
-	private String sortBy;
+	private final String name;
+	private final String value;
+	private final String filter;
+	private final String sortBy;
 	
 	public Query(String name, String value, String filter, String sortBy) {
 		super();

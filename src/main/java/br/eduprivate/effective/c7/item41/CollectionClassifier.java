@@ -1,8 +1,13 @@
 package br.eduprivate.effective.c7.item41;
 // Broken! - What does this program print?
 
-import java.util.*;
-import java.math.*;
+import java.math.BigInteger;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class CollectionClassifier {
     public static String classify(Set<?> s) {

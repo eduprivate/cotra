@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c8.item47;
 // Random number generation is hard! - Page 47
 
-import java.util.*;
+import java.util.Random;
 
 public class RandomBug {
 

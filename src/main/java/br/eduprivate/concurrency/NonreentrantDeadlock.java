@@ -14,7 +14,7 @@ class Widget {
 
 class LoggingWidget extends Widget {
     public synchronized void doSomething() {
-        System.out.println(toString() + ": calling doSomething");
+        System.out.println(this + ": calling doSomething");
         super.doSomething();
     }
 }

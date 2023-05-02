@@ -15,7 +15,7 @@ public class Test {
         System.out.printf("%s, %s, %s%n", s1, s2, s3);
     }
 
-    private static Provider DEFAULT_PROVIDER = new Provider() {
+    private static final Provider DEFAULT_PROVIDER = new Provider() {
         public Service newService() {
             return new Service() {
                 @Override public String toString() {
@@ -25,7 +25,7 @@ public class Test {
         }
     };
 
-    private static Provider COMP_PROVIDER = new Provider() {
+    private static final Provider COMP_PROVIDER = new Provider() {
         public Service newService() {
             return new Service() {
                 @Override public String toString() {
@@ -35,7 +35,7 @@ public class Test {
         }
     };
 
-    private static Provider ARMED_PROVIDER = new Provider() {
+    private static final Provider ARMED_PROVIDER = new Provider() {
         public Service newService() {
             return new Service() {
                 @Override public String toString() {

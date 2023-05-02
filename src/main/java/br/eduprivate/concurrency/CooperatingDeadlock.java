@@ -1,6 +1,7 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * CooperatingDeadlock

@@ -5,15 +5,15 @@
  */
 package br.eduprivate.queues.rpc;
 
+import com.rabbitmq.client.AMQP.BasicProperties;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
 /**
  *
  * @author cadu
  */
 import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
-import com.rabbitmq.client.AMQP.BasicProperties;
   
 public class RPCServer {
   
@@ -63,7 +63,7 @@ public class RPCServer {
           response = "" + fib(n);
         }
         catch (Exception e){
-          System.out.println(" [.] " + e.toString());
+          System.out.println(" [.] " + e);
           response = "";
         }
         finally {  

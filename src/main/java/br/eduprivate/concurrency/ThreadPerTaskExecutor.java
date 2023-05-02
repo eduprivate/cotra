@@ -1,6 +1,6 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
+import java.util.concurrent.Executor;
 
 /**
  * ThreadPerTaskExecutor
@@ -11,5 +11,5 @@ import java.util.concurrent.*;
 public class ThreadPerTaskExecutor implements Executor {
     public void execute(Runnable r) {
         new Thread(r).start();
-    };
+    }
 }

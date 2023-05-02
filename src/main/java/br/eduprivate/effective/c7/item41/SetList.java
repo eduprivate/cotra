@@ -1,7 +1,10 @@
 package br.eduprivate.effective.c7.item41;
 // What does this program print? - Page 194
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class SetList {
     public static void main(String[] args) {

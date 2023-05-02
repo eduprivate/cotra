@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c7.item49;
 // Broken comparator - can you spot the flaw? - Page 221
 
-import java.util.*;
+import java.util.Comparator;
 
 public class BrokenComparator {
     public static void main(String[] args) {
@@ -23,7 +23,7 @@ public class BrokenComparator {
 //          }
 //      };
 
-        int result = naturalOrder.compare(new Integer(42), new Integer(42));
+        int result = naturalOrder.compare(Integer.valueOf(42), Integer.valueOf(42));
         System.out.println(result);
     }
 }

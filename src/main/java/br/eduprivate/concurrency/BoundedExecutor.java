@@ -1,6 +1,8 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
+import java.util.concurrent.Executor;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.Semaphore;
 
 /**
  * BoundedExecutor

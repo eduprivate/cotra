@@ -1,11 +1,14 @@
 package br.eduprivate.effective.c11.item75;
 // StringList with a reasonable custom serialized form
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public final class StringList implements Serializable {
-    private transient int size   = 0;
-    private transient Entry head = null;
+    private final transient int size   = 0;
+    private final transient Entry head = null;
 
     // No longer Serializable!
     private static class Entry {
@@ -15,7 +18,7 @@ public final class StringList implements Serializable {
     }
 
     // Appends the specified string to the list
-    public final void add(String s) {
+    public void add(String s) {
         // Implementation omitted
     }
 

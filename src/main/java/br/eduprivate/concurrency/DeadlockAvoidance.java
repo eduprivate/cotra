@@ -1,9 +1,10 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
+
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
 
 /**
  * DeadlockAvoidance
@@ -12,7 +13,7 @@ import static java.util.concurrent.TimeUnit.NANOSECONDS;
  *
  */
 public class DeadlockAvoidance {
-    private static Random rnd = new Random();
+    private static final Random rnd = new Random();
 
     public boolean transferMoney(Account fromAcct,
                                  Account toAcct,

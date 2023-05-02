@@ -1,11 +1,10 @@
 package br.eduprivate.dp.observer;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class WeatherData implements Subject {
 	
-	private ArrayList<Observer> observers;
+	private final ArrayList<Observer> observers;
 	private float temperature;
 	private float humidity;
 	private float pressure;

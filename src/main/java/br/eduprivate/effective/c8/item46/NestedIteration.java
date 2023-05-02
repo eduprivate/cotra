@@ -1,7 +1,11 @@
 package br.eduprivate.effective.c8.item46;
 // Can you spot the bug? - Page 46
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
 
 enum Suit { CLUB, DIAMOND, HEART, SPADE }
 enum Rank { ACE, DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT,

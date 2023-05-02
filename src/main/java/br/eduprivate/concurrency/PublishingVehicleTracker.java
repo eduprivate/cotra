@@ -1,7 +1,8 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.Collections;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**

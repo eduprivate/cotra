@@ -3,7 +3,7 @@ package br.eduprivate.dswalgol;
 public class PrefixAverages {
 	
 	public static int[] prefixAverages1(int[] x) {
-		int ar[] = new int[x.length];
+		int[] ar = new int[x.length];
 		for (int i = 0; i < x.length; i++) {
 			int a = 0;
 			for (int j = 0; j < i; j++) {
@@ -16,7 +16,7 @@ public class PrefixAverages {
 	
 	public static int[] prefixAverages2(int[] x) {
 		int s = 0;	
-		int ar[] = new int[x.length];
+		int[] ar = new int[x.length];
 		for (int i = 0; i < x.length; i++) {
 			s = s+x[i];
 			ar[i] = s / (i+1);

@@ -1,6 +1,8 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * MonitorVehicleTracker

@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c6.item30;
 // Enum type with constant-specific class bodies and data - Page 153
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public enum Operation {
     PLUS("+") {

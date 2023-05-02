@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item25;
 // List-based generic reduction - Page 123
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Reduction {
     static <E> E reduce(List<E> list, Function<E> f, E initVal) {

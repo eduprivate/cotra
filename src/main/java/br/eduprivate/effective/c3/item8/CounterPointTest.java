@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c3.item8;
 // Test program that uses CounterPoint as Point
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CounterPointTest {
     // Initialize UnitCircle to contain all Points on the unit circle

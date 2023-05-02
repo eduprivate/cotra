@@ -1,8 +1,10 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
 import static java.util.concurrent.TimeUnit.NANOSECONDS;
+
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * TimedLocking
@@ -11,7 +13,7 @@ import static java.util.concurrent.TimeUnit.NANOSECONDS;
  *
  */
 public class TimedLocking {
-    private Lock lock = new ReentrantLock();
+    private final Lock lock = new ReentrantLock();
 
     public boolean trySendOnSharedLine(String message,
                                        long timeout, TimeUnit unit)

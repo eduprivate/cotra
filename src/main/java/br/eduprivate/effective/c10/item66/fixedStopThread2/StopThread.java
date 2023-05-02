@@ -1,8 +1,7 @@
 package br.eduprivate.effective.c10.item66.fixedStopThread2;
 
 // Cooperative thread termination with a volatile field
-
-import java.util.concurrent.*;
+import java.util.concurrent.TimeUnit;
 
 public class StopThread {
     private static volatile boolean stopRequested;

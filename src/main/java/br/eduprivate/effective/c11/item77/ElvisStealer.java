@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c11.item77;
 // "Stealer" class - Page 310
 
-import java.io.*;
+import java.io.Serializable;
 
 public class ElvisStealer implements Serializable {
     static Elvis impersonator;

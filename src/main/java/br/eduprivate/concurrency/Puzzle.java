@@ -1,6 +1,6 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.Set;
 
 /**
  * Puzzle

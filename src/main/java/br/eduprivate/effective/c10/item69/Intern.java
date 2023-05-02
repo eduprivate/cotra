@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c10.item69;
 // Concurrent canonicalizing map atop ConcurrentMap - Pages 273-274
 
-import java.util.concurrent.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
 public class Intern {
     private static final ConcurrentMap<String, String> map = 

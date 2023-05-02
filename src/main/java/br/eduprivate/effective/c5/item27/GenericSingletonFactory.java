@@ -1,11 +1,9 @@
 package br.eduprivate.effective.c5.item27;
 // Generic singleton factory method - Pages 131-132
 
-import java.util.*;
-
 public class GenericSingletonFactory {
     // Generic singleton factory pattern
-    private static UnaryFunction<Object> IDENTITY_FUNCTION =
+    private static final UnaryFunction<Object> IDENTITY_FUNCTION =
         new UnaryFunction<Object>() {
         public Object apply(Object arg) { return arg; }
     };

@@ -23,17 +23,16 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TopScoreDocCollector;
 import org.apache.lucene.store.FSDirectory;
-import org.apache.lucene.util.Version;
 
 /**
  * This terminal application creates an Apache Lucene index in a folder and adds files into this index
  * based on the input of the user.
  */
 public class TextFileIndexer {
-  private static StandardAnalyzer analyzer = new StandardAnalyzer();
+  private static final StandardAnalyzer analyzer = new StandardAnalyzer();
 
-  private IndexWriter writer;
-  private ArrayList<File> queue = new ArrayList<File>();
+  private final IndexWriter writer;
+  private final ArrayList<File> queue = new ArrayList<File>();
 
 
   public static void main(String[] args) throws IOException {
@@ -165,7 +164,7 @@ public class TextFileIndexer {
     }
     
     int newNumDocs = writer.numDocs();
-    System.out.println("");
+    System.out.println();
     System.out.println("************************");
     System.out.println((newNumDocs - originalNumDocs) + " documents added.");
     System.out.println("************************");

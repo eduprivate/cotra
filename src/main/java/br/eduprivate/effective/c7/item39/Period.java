@@ -1,7 +1,7 @@
 package br.eduprivate.effective.c7.item39;
 // Broken "immutable" time period class - Page 184
 
-import java.util.*;
+import java.util.Date;
 
 public final class Period {
     private final Date start;

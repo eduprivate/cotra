@@ -1,7 +1,8 @@
 package br.eduprivate.effective.c5.item28;
 // Private helper method for wildcard capture - Pages 139-140
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class Swap {
     public static void swap(List<?> list, int i, int j) {

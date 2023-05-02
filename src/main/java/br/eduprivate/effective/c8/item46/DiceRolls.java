@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c8.item46;
 // Same bug as NestIteration.java (but different symptom)!! - Page 213
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
 
 enum Face { ONE, TWO, THREE, FOUR, FIVE, SIX }
 

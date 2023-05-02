@@ -1,8 +1,8 @@
 package br.eduprivate.effective.c5.item29;
 // Use of asSubclass to safely cast to a bounded type token - Page 146
 
-import java.lang.annotation.*;
-import java.lang.reflect.*;
+import java.lang.annotation.Annotation;
+import java.lang.reflect.AnnotatedElement;
 
 public class PrintAnnotation {
     // Use of asSubclass to safely cast to a bounded type token

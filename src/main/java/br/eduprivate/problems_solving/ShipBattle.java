@@ -57,9 +57,10 @@ public class ShipBattle {
 		boolean isShipSunk = true;
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
-				if (board[i][j] == 1) {
-					isShipSunk = false;
-				}
+                if (board[i][j] == 1) {
+                    isShipSunk = false;
+                    break;
+                }
 			}
 		}
 
@@ -99,9 +100,10 @@ public class ShipBattle {
 		boolean isShipSunk = true;
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < n; j++) {
-				if (board[i][j] == 1) {
-					isShipSunk = false;
-				}
+                if (board[i][j] == 1) {
+                    isShipSunk = false;
+                    break;
+                }
 			}
 		}
 		
@@ -122,8 +124,10 @@ public class ShipBattle {
 		
 		for (int i = rowRemainsX; i <= rowRemainsY; i++) {
 			for (int j = columnRemainsnsX; j <= columnRaminsY; j++) {
-				if (board[i][j] == 2)
-					isShipHit = true;				
+                if (board[i][j] == 2) {
+                    isShipHit = true;
+                    break;
+                }
 			}
 		}
 

@@ -1,8 +1,10 @@
 package br.eduprivate.effective.c11.item78;
 // Period class with serialization proxy - Pages 312-313
 
-import java.util.*;
-import java.io.*;
+import java.io.InvalidObjectException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
+import java.util.Date;
 
 public final class Period implements Serializable {
     private final Date start;

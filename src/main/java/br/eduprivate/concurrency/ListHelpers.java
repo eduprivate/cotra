@@ -1,6 +1,8 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * ListHelder

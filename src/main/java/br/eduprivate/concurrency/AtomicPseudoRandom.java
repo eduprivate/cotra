@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @ThreadSafe
 public class AtomicPseudoRandom extends PseudoRandom {
-    private AtomicInteger seed;
+    private final AtomicInteger seed;
 
     AtomicPseudoRandom(int seed) {
         this.seed = new AtomicInteger(seed);

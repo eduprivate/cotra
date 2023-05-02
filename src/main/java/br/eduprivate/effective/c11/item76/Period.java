@@ -2,12 +2,12 @@ package br.eduprivate.effective.c11.item76;
 // Immutable class that uses defensive copying - Page 302
 // This class is susceptible to several attacks!!
 
-import java.util.*;
-import java.io.*;
+import java.io.Serializable;
+import java.util.Date;
 
 public final class Period implements Serializable {
-    private Date start;
-    private Date end;
+    private final Date start;
+    private final Date end;
 
     /**
      * @param  start the beginning of the period

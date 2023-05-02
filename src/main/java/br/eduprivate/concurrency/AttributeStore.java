@@ -1,7 +1,8 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
-import java.util.regex.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.regex.Pattern;
 
 
 /**

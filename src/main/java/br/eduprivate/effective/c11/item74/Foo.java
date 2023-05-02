@@ -1,7 +1,10 @@
 package br.eduprivate.effective.c11.item74;
 // Serializable subclass of nonserializable stateful class - Pages 293-294
 
-import java.io.*;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 
 public class Foo extends AbstractFoo implements Serializable {
     private void readObject(ObjectInputStream s)

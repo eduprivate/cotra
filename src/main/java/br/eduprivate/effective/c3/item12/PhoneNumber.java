@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c3.item12;
 // Making PhoneNumber comparable - Pages 65-66
 
-import java.util.*;
+import java.util.NavigableSet;
+import java.util.Random;
+import java.util.TreeSet;
 
 public final class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
     private final short areaCode;

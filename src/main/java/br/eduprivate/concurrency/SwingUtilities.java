@@ -1,7 +1,11 @@
 package br.eduprivate.concurrency;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.concurrent.*;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
+import java.util.concurrent.ThreadFactory;
 
 /**
  * SwingUtilities
@@ -31,7 +35,7 @@ public class SwingUtilities {
 
     public static void invokeAndWait(Runnable task)
             throws InterruptedException, InvocationTargetException {
-        Future f = exec.submit(task);
+        Future<?> f = exec.submit(task);
         try {
             f.get();
         } catch (ExecutionException e) {

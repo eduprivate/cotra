@@ -1,8 +1,11 @@
 package br.eduprivate.effective.c11.item78;
 // Mutable period attack - Page 303
 
-import java.util.*;
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Date;
 
 public class MutablePeriod {
     // A period instance

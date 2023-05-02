@@ -1,8 +1,10 @@
 package br.eduprivate.effective.c10.item67;
 // Broken - invokes alien method from synchronized block! - Page 265
 
-import java.util.*;
-import java.util.concurrent.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 public class ObservableSet<E> extends ForwardingSet<E> {
     public ObservableSet(Set<E> set) { super(set); }

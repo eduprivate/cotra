@@ -1,13 +1,12 @@
 package br.eduprivate.effective.c2.item1;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ServiceCore {
 
 	private static final Map<String, Core> coreProviders = 
-			new ConcurrentHashMap();
+			new ConcurrentHashMap<>();
 	private static final String DEFAULT_CORE_NAME = "index";
 	
 	private ServiceCore(){

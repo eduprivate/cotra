@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c5.item27;
 // Using a recursive type bound to express mutual comparability - Pages 132-133
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class RecursiveTypeBound {
     // Returns the maximum value in a list - uses recursive type bound

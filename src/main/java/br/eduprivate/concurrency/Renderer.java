@@ -1,8 +1,14 @@
 package br.eduprivate.concurrency;
 
-import java.util.*;
-import java.util.concurrent.*;
 import static br.eduprivate.concurrency.LaunderThrowable.launderThrowable;
+
+import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CompletionService;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorCompletionService;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Future;
 
 /**
  * Renderer

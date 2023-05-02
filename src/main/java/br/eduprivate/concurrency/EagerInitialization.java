@@ -9,7 +9,7 @@ package br.eduprivate.concurrency;
  */
 @ThreadSafe
         public class EagerInitialization {
-    private static Resource resource = new Resource();
+    private static final Resource resource = new Resource();
 
     public static Resource getResource() {
         return resource;

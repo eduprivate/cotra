@@ -1,6 +1,12 @@
 package br.eduprivate.concurrency;
 
-import java.util.concurrent.*;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
 
 /**
  * BackgroundTask
@@ -38,7 +44,7 @@ public abstract class BackgroundTask <V> implements Runnable, Future<V> {
                     } finally {
                         onCompletion(value, thrown, cancelled);
                     }
-                };
+                }
             });
         }
     }

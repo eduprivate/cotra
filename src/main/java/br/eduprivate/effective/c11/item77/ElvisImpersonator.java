@@ -1,7 +1,9 @@
 package br.eduprivate.effective.c11.item77;
 // Stealer attack program, produces two distinct Elvis instances! - Page 310
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 
 public class ElvisImpersonator {
     // Byte stream could not have come from real Elvis instance!

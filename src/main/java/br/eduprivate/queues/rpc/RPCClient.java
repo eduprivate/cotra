@@ -5,24 +5,25 @@
  */
 package br.eduprivate.queues.rpc;
 
+import java.util.UUID;
+
+import com.rabbitmq.client.AMQP.BasicProperties;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
 /**
  *
  * @author cadu
  */
 import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.QueueingConsumer;
-import com.rabbitmq.client.AMQP.BasicProperties;
-import java.util.UUID;
 
 public class RPCClient {
 
-  private Connection connection;
-  private Channel channel;
-  private String requestQueueName = "rpc_queue";
-  private String replyQueueName;
-  private QueueingConsumer consumer;
+  private final Connection connection;
+  private final Channel channel;
+  private final String requestQueueName = "rpc_queue";
+  private final String replyQueueName;
+  private final QueueingConsumer consumer;
 
   public RPCClient() throws Exception {
     ConnectionFactory factory = new ConnectionFactory();

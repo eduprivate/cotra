@@ -1,10 +1,9 @@
 package br.eduprivate.problems_solving;
 
-import java.io.*;
-import java.math.*;
-import java.text.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.util.Scanner;
 
 public class ElectronicsShop {
 

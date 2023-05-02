@@ -2,7 +2,7 @@ package br.eduprivate.effective.c4.item20.taggedclass;
 
 // Tagged class - vastly inferior to a class hierarchy!
 class Figure {
-    enum Shape { RECTANGLE, CIRCLE };
+    enum Shape { RECTANGLE, CIRCLE }
 
     // Tag field - the shape of this figure
     final Shape shape;

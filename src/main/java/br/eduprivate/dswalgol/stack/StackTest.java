@@ -21,11 +21,11 @@ public class StackTest {
 	
 	public static void main(String[] args) {
 		Integer[] arr = new Integer[5];
-		Integer a1 = new Integer(1);
-		Integer a2 = new Integer(2);
-		Integer a3 = new Integer(3);
-		Integer a4 = new Integer(4);
-		Integer a5 = new Integer(5);
+		Integer a1 = Integer.valueOf(1);
+		Integer a2 = Integer.valueOf(2);
+		Integer a3 = Integer.valueOf(3);
+		Integer a4 = Integer.valueOf(4);
+		Integer a5 = Integer.valueOf(5);
 		
 		arr[0] = a1;
 		arr[1] = a2;

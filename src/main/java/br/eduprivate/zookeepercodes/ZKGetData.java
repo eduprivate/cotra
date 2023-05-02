@@ -1,13 +1,12 @@
 package br.eduprivate.zookeepercodes;
 
-import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
-import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.Watcher.Event.KeeperState;
+import org.apache.zookeeper.ZooKeeper;
 import org.apache.zookeeper.data.Stat;
 
 public class ZKGetData {
@@ -34,11 +33,11 @@ public class ZKGetData {
                public void process(WatchedEvent we) {
 					
                   if (we.getType() == Event.EventType.None) {
-                     switch(we.getState()) {
-                        case Expired:
-                        connectedSignal.countDown();
-                        break;
-                     }
+                      if (we.getState() == KeeperState.Expired) {
+                          connectedSignal.countDown();
+                      } else if (we.getState() == null) {
+                          throw new NullPointerException();
+                      }
 							
                   } else {
                      String path = "/MyFirstZnode";

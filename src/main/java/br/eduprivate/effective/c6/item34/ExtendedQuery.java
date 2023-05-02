@@ -21,9 +21,9 @@ public enum ExtendedQuery implements Query {
 		}
 	};
 	
-	private String query;
+	private final String query;
 	
-	private ExtendedQuery(String query) {
+	ExtendedQuery(String query) {
 		this.query = query;
 	}
 	
