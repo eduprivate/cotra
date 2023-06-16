@@ -28,9 +28,7 @@ public class ArrayVector {
 		if (size == capacity) {
 			capacity *= 2;
 			Object[] b = new Object[capacity];
-			for (int i = 0; i < size; i++) {
-				b[i] = a[i];
-			}
+			if (size >= 0) System.arraycopy(a, 0, b, 0, size);
 			a = b;
 		}
 		for (int i = size-1; i > r; i--) {

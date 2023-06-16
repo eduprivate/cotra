@@ -14,7 +14,9 @@ import com.rabbitmq.client.Connection;
  */
 import com.rabbitmq.client.ConnectionFactory;
 import com.rabbitmq.client.QueueingConsumer;
-  
+
+import java.nio.charset.StandardCharsets;
+
 public class RPCServer {
   
   private static final String RPC_QUEUE_NAME = "rpc_queue";
@@ -56,18 +58,18 @@ public class RPCServer {
                                          .build();
         
         try {
-          String message = new String(delivery.getBody(),"UTF-8");
+          String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
           int n = Integer.parseInt(message);
   
           System.out.println(" [.] fib(" + message + ")");
-          response = "" + fib(n);
+          response = String.valueOf(fib(n));
         }
         catch (Exception e){
           System.out.println(" [.] " + e);
           response = "";
         }
         finally {  
-          channel.basicPublish( "", props.getReplyTo(), replyProps, response.getBytes("UTF-8"));
+          channel.basicPublish( "", props.getReplyTo(), replyProps, response.getBytes(StandardCharsets.UTF_8));
   
           channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
         }

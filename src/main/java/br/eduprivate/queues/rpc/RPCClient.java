@@ -5,6 +5,7 @@
  */
 package br.eduprivate.queues.rpc;
 
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 import com.rabbitmq.client.AMQP.BasicProperties;
@@ -46,12 +47,12 @@ public class RPCClient {
                                 .replyTo(replyQueueName)
                                 .build();
 
-    channel.basicPublish("", requestQueueName, props, message.getBytes("UTF-8"));
+    channel.basicPublish("", requestQueueName, props, message.getBytes(StandardCharsets.UTF_8));
 
     while (true) {
       QueueingConsumer.Delivery delivery = consumer.nextDelivery();
       if (delivery.getProperties().getCorrelationId().equals(corrId)) {
-        response = new String(delivery.getBody(),"UTF-8");
+        response = new String(delivery.getBody(), StandardCharsets.UTF_8);
         break;
       }
     }

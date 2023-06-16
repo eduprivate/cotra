@@ -6,6 +6,7 @@
 package br.eduprivate.queues.topic;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 /**
  *
@@ -47,7 +48,7 @@ public class ReceiveLogsTopic {
       @Override
       public void handleDelivery(String consumerTag, Envelope envelope,
                                  AMQP.BasicProperties properties, byte[] body) throws IOException {
-        String message = new String(body, "UTF-8");
+        String message = new String(body, StandardCharsets.UTF_8);
         System.out.println(" [x] Received '" + envelope.getRoutingKey() + "':'" + message + "'");
       }
     };

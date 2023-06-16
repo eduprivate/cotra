@@ -56,7 +56,7 @@ public class NRTLucene {
                     for (int i = 0; i < 100000; ++i) {
                         Document doc = new Document();
                         doc.add(new LongPoint("time", System.currentTimeMillis()));
-                        doc.add(new StringField("counter", ""+i, Field.Store.YES));
+                        doc.add(new StringField("counter", String.valueOf(i), Field.Store.YES));
                         indexWriter.addDocument(doc);
                         searcherManager.maybeRefresh();
                         Thread.sleep(100);

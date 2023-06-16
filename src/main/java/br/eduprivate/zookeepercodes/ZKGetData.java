@@ -1,5 +1,6 @@
 package br.eduprivate.zookeepercodes;
 
+import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CountDownLatch;
 
 import org.apache.zookeeper.KeeperException;
@@ -46,7 +47,7 @@ public class ZKGetData {
                         byte[] bn = zk.getData(path,
                         false, null);
                         String data = new String(bn,
-                        "UTF-8");
+                                StandardCharsets.UTF_8);
                         System.out.println(data);
                         connectedSignal.countDown();
 							
@@ -57,7 +58,7 @@ public class ZKGetData {
                }
             }, null);
 				
-            String data = new String(b, "UTF-8");
+            String data = new String(b, StandardCharsets.UTF_8);
             System.out.println(data);
             connectedSignal.await();
 				

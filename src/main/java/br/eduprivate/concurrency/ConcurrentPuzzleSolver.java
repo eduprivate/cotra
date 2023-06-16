@@ -23,8 +23,7 @@ public class ConcurrentPuzzleSolver <P, M> {
         this.puzzle = puzzle;
         this.exec = initThreadPool();
         this.seen = new ConcurrentHashMap<P, Boolean>();
-        if (exec instanceof ThreadPoolExecutor) {
-            ThreadPoolExecutor tpe = (ThreadPoolExecutor) exec;
+        if (exec instanceof ThreadPoolExecutor tpe) {
             tpe.setRejectedExecutionHandler(new ThreadPoolExecutor.DiscardPolicy());
         }
     }

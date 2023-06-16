@@ -19,9 +19,8 @@ public class ColorPoint {
     }
 
     @Override public boolean equals(Object o) {
-        if (!(o instanceof ColorPoint))
+        if (!(o instanceof ColorPoint cp))
             return false;
-        ColorPoint cp = (ColorPoint) o;
         return cp.point.equals(point) && cp.color.equals(color);
     }
 

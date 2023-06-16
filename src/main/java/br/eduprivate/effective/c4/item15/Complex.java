@@ -49,11 +49,10 @@ public final class Complex {
     @Override public boolean equals(Object o) {
        if (o == this)
            return true;
-       if (!(o instanceof Complex))
+       if (!(o instanceof Complex c))
            return false;
-       Complex c = (Complex) o;
 
-       // See page 43 to find out why we use compare instead of ==
+        // See page 43 to find out why we use compare instead of ==
        return Double.compare(re, c.re) == 0 &&
               Double.compare(im, c.im) == 0;
     }

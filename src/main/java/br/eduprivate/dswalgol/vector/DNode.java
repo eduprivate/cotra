@@ -1,7 +1,8 @@
 package br.eduprivate.dswalgol.vector;
 
-public class DNode{
-	private DNode prev, next;
+public class DNode implements Position {
+	private DNode prev;
+	private DNode next;
 	private Object element;
 	
 	public DNode(DNode newPrev, DNode newNext, Object elem) {
@@ -19,6 +20,10 @@ public class DNode{
 
 	public void setNext(DNode next){
 		this.next = next;
+	}
+
+	public void setPrev(DNode prev) {
+		this.prev = prev;
 	}
 	
 	public DNode getNext() {return next;}

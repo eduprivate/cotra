@@ -24,8 +24,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
 
 	@Override
 	public void update(Observable obs, Object arg) {
-		if (obs instanceof WeatherData) {
-			WeatherData weatherData = (WeatherData) obs;
+		if (obs instanceof WeatherData weatherData) {
 			this.temperature = weatherData.getTemperature();
 			this.humidity = weatherData.getHumidity();
 			display();

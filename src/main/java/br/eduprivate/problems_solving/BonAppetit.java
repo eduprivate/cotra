@@ -23,7 +23,7 @@ public class BonAppetit {
     	if (costPerPerson == charged) {
     		return "Bon Appetit";
     	} else {
-    		return "" + (charged - costPerPerson);
+    		return String.valueOf(charged - costPerPerson);
     	}
     }
 	

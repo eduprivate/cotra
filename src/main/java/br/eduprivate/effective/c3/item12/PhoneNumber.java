@@ -29,9 +29,8 @@ public final class PhoneNumber implements Cloneable, Comparable<PhoneNumber> {
     @Override public boolean equals(Object o) {
         if (o == this)
             return true;
-        if (!(o instanceof PhoneNumber))
+        if (!(o instanceof PhoneNumber pn))
             return false;
-        PhoneNumber pn = (PhoneNumber)o;
         return pn.lineNumber == lineNumber
             && pn.prefix  == prefix
             && pn.areaCode  == areaCode;
