@@ -1,5 +1,7 @@
 package br.eduprivate.dswalgol.vector;
 
+import java.util.ArrayList;
+
 public class NodeList implements List {
     protected int numElts;
     protected DNode header, trailer;
@@ -164,6 +166,5 @@ public class NodeList implements List {
         System.out.println(nodeList.isEmpty());
         System.out.println(nodeList.first().element());
         System.out.println(nodeList.size());
-
     }
 }
