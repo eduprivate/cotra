@@ -1,4 +1,4 @@
-package br.eduprivate.dswalgol;
+package br.eduprivate.dswalgol.array;
 
 import br.eduprivate.dswalgol.vector.Position;
 import br.eduprivate.dswalgol.vector.Sequence;

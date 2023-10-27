@@ -1,4 +1,4 @@
-package br.eduprivate.dswalgol;
+package br.eduprivate.dswalgol.array;
 
 public class ArrayMaxProgram {
 	static int arrayMax(int[] A, int n) {
