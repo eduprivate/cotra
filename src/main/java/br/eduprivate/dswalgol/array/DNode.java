@@ -1,16 +1,16 @@
 package br.eduprivate.dswalgol.array;
 
-public class DNode {
-    protected String element;
+public class DNode<E> {
+    protected E element;
     protected DNode next, prev;
 
-    public DNode(String e, DNode p, DNode n) {
+    public DNode(E e, DNode p, DNode n) {
         this.element = e;
         this.prev = p;
         this.next = n;
     }
 
-    public String getElement() {
+    public E getElement() {
         return element;
     }
 
@@ -22,7 +22,7 @@ public class DNode {
         return prev;
     }
 
-    public void setElement(String element) {
+    public void setElement(E element) {
         this.element = element;
     }
 

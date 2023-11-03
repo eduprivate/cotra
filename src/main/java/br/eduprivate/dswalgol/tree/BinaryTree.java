@@ -127,7 +127,7 @@ public class BinaryTree {
         }
     }
 
-    private BinaryTree createBinaryTree() {
+    private static BinaryTree createBinaryTree() {
         BinaryTree bt = new BinaryTree();
 
         bt.add(6);
@@ -139,6 +139,11 @@ public class BinaryTree {
         bt.add(9);
 
         return bt;
+    }
+
+    public static void main(String[] args) {
+        final BinaryTree binaryTree = createBinaryTree();
+        System.out.println(binaryTree);
     }
 
 }
