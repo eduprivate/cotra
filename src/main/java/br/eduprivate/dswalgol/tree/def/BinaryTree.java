@@ -1,4 +1,4 @@
-package br.eduprivate.dswalgol.tree;
+package br.eduprivate.dswalgol.tree.def;
 
 import java.util.LinkedList;
 import java.util.Queue;

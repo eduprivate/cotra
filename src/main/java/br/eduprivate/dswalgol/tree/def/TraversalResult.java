@@ -1,4 +1,4 @@
-package br.eduprivate.dswalgol.tree;
+package br.eduprivate.dswalgol.tree.def;
 
 public class TraversalResult {
     public Object finalResult;

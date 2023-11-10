@@ -1,7 +1,6 @@
-package br.eduprivate.dswalgol.tree;
+package br.eduprivate.dswalgol.tree.def;
 
 import br.eduprivate.dswalgol.net.datastructures.Position;
-import br.eduprivate.effective.c6.item30.Operation;
 
 public class EvaluateExpressionTour extends EulerTour {
     @Override

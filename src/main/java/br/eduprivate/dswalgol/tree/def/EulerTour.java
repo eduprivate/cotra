@@ -1,4 +1,4 @@
-package br.eduprivate.dswalgol.tree;
+package br.eduprivate.dswalgol.tree.def;
 
 import br.eduprivate.dswalgol.net.datastructures.Position;
 
