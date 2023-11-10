@@ -11,6 +11,10 @@ public class LinkedBinaryTree extends BinaryTree {
         size = 1;
     }
 
+    public Position getRoot() {
+        return root;
+    }
+
     public int size() {return size;}
     public boolean isEmpty() {return (size == 0);}
     public boolean isInternal(Position v) {
@@ -79,5 +83,13 @@ public class LinkedBinaryTree extends BinaryTree {
             size -= 2;
             }
         }
+    }
+
+    public static void main(String[] args) {
+        LinkedBinaryTree tree = new LinkedBinaryTree();
+        System.out.println(tree);
+        System.out.println(tree.getRoot());
+        System.out.println("");
+        System.out.println(tree.size);
     }
 }

@@ -123,7 +123,7 @@ public class BinaryTree {
         }
     }
 
-    private static BinaryTree createBinaryTree() {
+    protected static BinaryTree createBinaryTree() {
         BinaryTree bt = new BinaryTree();
 
         bt.add(6);
