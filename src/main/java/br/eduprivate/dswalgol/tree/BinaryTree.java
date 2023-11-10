@@ -9,7 +9,6 @@ public class BinaryTree {
     public BinaryTree() {
     }
 
-
     public BinaryTree(int value) {
         this.root = new Node(value);
     }
@@ -84,7 +83,6 @@ public class BinaryTree {
         }
     }
 
-
     public void traverseLevelOrder() {
         if (root == null) {
             return;
@@ -109,7 +107,6 @@ public class BinaryTree {
         }
     }
 
-
     public void traversePostOrder(Node node) {
         if (node != null) {
             traversePostOrder(node.left);
@@ -117,7 +114,6 @@ public class BinaryTree {
             System.out.print(" " + node.value);
         }
     }
-
 
     public void traversePreOrder(Node node) {
         if (node != null) {
@@ -144,6 +140,9 @@ public class BinaryTree {
     public static void main(String[] args) {
         final BinaryTree binaryTree = createBinaryTree();
         System.out.println(binaryTree);
+        binaryTree.traversePreOrder(binaryTree.root);
+        System.out.println("");
+        binaryTree.traverseInOrder(binaryTree.root);
     }
 
 }
