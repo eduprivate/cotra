@@ -1,6 +1,6 @@
 package br.eduprivate.problems_solving.sliding;
 
-class GFG2 {
+class SlidingWindow2 {
 
     // Returns maximum sum in
     // a subarray of size k.

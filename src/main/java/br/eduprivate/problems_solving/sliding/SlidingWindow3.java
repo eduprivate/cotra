@@ -1,6 +1,6 @@
 package br.eduprivate.problems_solving.sliding;
 
-public class GFG3 {
+public class SlidingWindow3 {
 
 
     private static int maxSum(int[] arr, int k) {

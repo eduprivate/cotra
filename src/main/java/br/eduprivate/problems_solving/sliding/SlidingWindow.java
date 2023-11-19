@@ -1,6 +1,6 @@
 package br.eduprivate.problems_solving.sliding;
 
-class GFG {
+class SlidingWindow {
     // Returns maximum sum in
     // a subarray of size k.
     private static int maxSum(int arr[], int k)
