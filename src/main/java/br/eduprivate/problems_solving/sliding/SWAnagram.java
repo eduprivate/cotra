@@ -1,6 +1,7 @@
 package br.eduprivate.problems_solving.sliding;
 
 import java.util.*;
+// see geeksforgeeks
 
 class SWAnagram {
     public static int countAnagrams(String text, String word)

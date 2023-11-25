@@ -4,6 +4,7 @@ import java.io.*;
 import java.lang.*;
 import java.util.*;
 
+// see geeksforgeeks
 class Islands {
     // No of rows and columns
     static final int ROW = 5, COL = 5;

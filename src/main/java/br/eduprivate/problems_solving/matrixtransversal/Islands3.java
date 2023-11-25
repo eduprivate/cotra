@@ -3,6 +3,7 @@ package br.eduprivate.problems_solving.matrixtransversal;
 import java.io.*;
 import java.util.*;
 
+// see geeksforgeeks
 class Islands3 {
     static int n, m;
 
@@ -30,6 +31,7 @@ class Islands3 {
             mark_component(v, vis, i - 1, j - 1);
             mark_component(v, vis, i + 1, j - 1);
             mark_component(v, vis, i - 1, j + 1);
+
         }
     }
 

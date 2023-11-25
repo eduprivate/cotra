@@ -1,5 +1,7 @@
 package br.eduprivate.problems_solving.sliding;
 
+// see geeksforgeeks
+
 public class SWSubstringContainingPattern {
     static final int no_of_chars = 256;
 

@@ -2,6 +2,7 @@ package br.eduprivate.problems_solving.sliding;
 
 import java.util.Arrays;
 
+// see geeksforgeeks
 public class SubstringContainingPattern {
     // Function to check if the substring contains all
     // characters of the pattern
