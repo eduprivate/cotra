@@ -1,5 +1,6 @@
 package br.eduprivate.problems_solving.binarysearch;
 
+// see geeksforgeeks
 class Bitonic {
 
     public static int[] makeSquares(int[] arr) {
