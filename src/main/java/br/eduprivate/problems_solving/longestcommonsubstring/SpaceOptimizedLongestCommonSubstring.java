@@ -2,6 +2,8 @@ package br.eduprivate.problems_solving.longestcommonsubstring;
 
 import java.io.*;
 
+// see geeksforgeeks
+
 class SpaceOptimizedLongestCommonSubstring
 {
 
