@@ -13,8 +13,7 @@ class Graph {
     // Adjacency List Representation
     private LinkedList<Integer> adj[];
 
-        // Constructor
-    @SuppressWarnings("unchecked") Graph(int v)
+    Graph(int v)
     {
         V = v;
         adj = new LinkedList[v];

@@ -29,8 +29,7 @@ public class Subsets {
         }
     }
 
-    public static List<List<Integer> >
-    subsets(List<Integer> A)
+    public static List<List<Integer>> subsets(List<Integer> A)
     {
         List<Integer> subset = new ArrayList<>();
         List<List<Integer> > res = new ArrayList<>();

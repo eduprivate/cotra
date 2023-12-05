@@ -27,6 +27,7 @@ class FloydCycleFinding {
         /* 3. Make next of new Node as head */
         new_node.next = head;
 
+
         /* 4. Move the head to point to new Node */
         head = new_node;
     }

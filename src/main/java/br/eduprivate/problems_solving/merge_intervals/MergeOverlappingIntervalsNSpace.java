@@ -49,6 +49,7 @@ public class MergeOverlappingIntervalsNSpace {
                 stack.pop();
                 stack.push(top);
             }
+
         }
 
         // Print contents of stack
@@ -77,5 +78,13 @@ class Interval {
     {
         this.start = start;
         this.end = end;
+    }
+
+    @Override
+    public String toString() {
+        return "Interval{" +
+                "start=" + start +
+                ", end=" + end +
+                '}';
     }
 }

@@ -5,51 +5,35 @@ import java.util.*;
 // see geeksforgeeks
 
 public class MissingNumber {
-    public static void main(String[] args)
-    {
-        int[] arr = { 3, 2, 4, 5, 1 };
-        int n = arr.length;
-        System.out.println("Before sort :");
-        System.out.println(Arrays.toString(arr));
-        CycleSort(arr, n);
 
-    }
 
-    static void CycleSort(int[] arr, int n)
-    {
-        int i = 0;
-        while (i < n) {
-            // as array is of 1 based indexing so the
-            // correct position or index number of each
-            // element is element-1 i.e. 1 will be at 0th
-            // index similarly 2 correct index will 1 so
-            // on...
-            int correctpos = arr[i] - 1;
-            if (arr[i] < n && arr[i] != arr[correctpos]) {
-                // if array element should be lesser than
-                // size and array element should not be at
-                // its correct position then only swap with
-                // its correct position or index value
-                swap(arr, i, correctpos);
+        // Function to find the missing number
+        public static void findMissing(int arr[], int N)
+        {
+            int i;
+            int temp[] = new int[N + 1];
+            for (i = 0; i <= N; i++) {
+                temp[i] = 0;
             }
-            else {
-                // if element is at its correct position
-                // just increment i and check for remaining
-                // array elements
-                i++;
+
+            for (i = 0; i < N; i++) {
+                temp[arr[i] - 1] = 1;
             }
+
+            int ans = 0;
+            for (i = 0; i <= N; i++) {
+                if (temp[i] == 0)
+                    ans = i + 1;
+            }
+            System.out.println(ans);
         }
-        System.out.println("After sort :  ");
-        System.out.print(Arrays.toString(arr));
+        // Driver Code
+        public static void main(String[] args)
+        {
+            int arr[] = { 1, 3, 7, 5, 6, 2 };
+            int n = arr.length;
 
-
+            // Function call
+            findMissing(arr, n);
+        }
     }
-
-    static void swap(int[] arr, int i, int correctpos)
-    {
-        // swap elements with their correct indexes
-        int temp = arr[i];
-        arr[i] = arr[correctpos];
-        arr[correctpos] = temp;
-    }
-}

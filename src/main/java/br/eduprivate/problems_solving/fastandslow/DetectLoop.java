@@ -9,6 +9,17 @@ class DetectLoop {
         int data;
         Node next;
         int flag;
+
+        @Override
+        public String toString() {
+            StringBuilder builder = new StringBuilder();
+
+            builder.append("Data: ");
+            builder.append(this.data);
+            builder.append(", next: ");
+
+            return builder.toString();
+        }
     };
 
     static Node push(Node head_ref, int new_data)
@@ -66,6 +77,8 @@ class DetectLoop {
 
         // Create a loop for testing
         head.next.next.next.next = head;
+
+        head.toString();
 
         if (detectLoop(head))
             System.out.print("Loop Found");
