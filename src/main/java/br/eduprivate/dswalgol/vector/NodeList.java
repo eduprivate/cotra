@@ -1,6 +1,6 @@
 package br.eduprivate.dswalgol.vector;
 
-public class NodeList implements List {
+public class NodeList<E> implements List<E> {
     protected int numElts;
     protected DNode<E> header, trailer;
 
@@ -89,7 +89,7 @@ public class NodeList implements List {
     }
 
     @Override
-    public Position insertBefore(Position p, Object element) throws InvalidPositionException {
+    public Position insertBefore(Position p, E element) throws InvalidPositionException {
         DNode<E> v = checkPosition(p);
         numElts++;
         DNode<E> newNode = new DNode<E>(v.getPrev(), v, element);
@@ -99,7 +99,7 @@ public class NodeList implements List {
     }
 
     @Override
-    public Position insertAfter(Position p, Object element) throws InvalidPositionException {
+    public Position insertAfter(Position p, E element) throws InvalidPositionException {
         DNode<E> v = checkPosition(p);
         numElts++;
         DNode<E> newNode = new DNode<E>(v.getNext(), v, element);
@@ -109,7 +109,7 @@ public class NodeList implements List {
     }
 
     @Override
-    public Position insertFirst(Object element) {
+    public Position insertFirst(E element) {
         numElts++;
         DNode<E> newNode = new DNode<E>(header, header.getNext(), element);
         header.getNext().setPrev(newNode);
@@ -140,7 +140,7 @@ public class NodeList implements List {
     public Object replaceElement(Position p, Object element) throws InvalidPositionException {
         DNode<E> v = checkPosition(p);
         Object oldElt  =v.element();
-        v.setElement(element);
+        v.setElement((E)element);
         return oldElt;
     }
 
@@ -150,14 +150,14 @@ public class NodeList implements List {
         DNode<E> pB = checkPosition(b);
         Object temp = pA.element();
         pA.setElement(pB.element());
-        pB.setElement(temp);
+        pB.setElement((E)temp);
     }
 
     public static void main(String[] args) throws EmptyContainerException {
         NodeList nodeList = new NodeList();
         String first = new String("first");
         String second = new String("second");
-        Position position = new DNode<E>(null, null,first);
+        Position position = new DNode(null, null,first);
 
         nodeList.insertFirst(first);
         nodeList.insertFirst(second);

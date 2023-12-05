@@ -3,6 +3,7 @@ package br.eduprivate.dswalgol.priority_queue;
 import br.eduprivate.dswalgol.net.datastructures.DefaultComparator;
 import br.eduprivate.dswalgol.net.datastructures.Entry;
 import br.eduprivate.dswalgol.net.datastructures.Position;
+import br.eduprivate.dswalgol.tree.gen.EmptyListException;
 import br.eduprivate.dswalgol.tree.gen.NodePositionList;
 import br.eduprivate.dswalgol.tree.gen.PositionList;
 
@@ -62,7 +63,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
     }
 
     @Override
-    public Entry<K, V> min() throws EmptyPriorityQueueException {
+    public Entry<K, V> min() throws EmptyPriorityQueueException, EmptyListException {
         if (entries.isEmpty())
             throw new EmptyPriorityQueueException("Fila de prioridade esta vazia");
         else
@@ -70,7 +71,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
     }
 
     @Override
-    public Entry<K, V> insert(K key, V value) throws EmptyPriorityQueueException {
+    public Entry<K, V> insert(K key, V value) throws EmptyPriorityQueueException, EmptyListException {
         checkKey(key);
         Entry<K, V> entry = new MyEntry<>(key,value);
         insertEntry(entry);
@@ -78,7 +79,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
 
     }
 
-    private void insertEntry(Entry<K,V> entry) {
+    private void insertEntry(Entry<K,V> entry) throws EmptyListException {
         if (entries.isEmpty()) {
             entries.addFirst(entry);
             actionPos = entries.first();
@@ -102,7 +103,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
     }
 
     @Override
-    public Entry<K, V> removeMin() throws EmptyPriorityQueueException {
+    public Entry<K, V> removeMin() throws EmptyPriorityQueueException, EmptyListException {
         if (entries.isEmpty())
             throw new EmptyPriorityQueueException("Fila de prioridade esta vazia");
         else
