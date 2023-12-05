@@ -9,8 +9,8 @@ import java.util.Iterator;
 public interface PositionList<E> extends Iterable<E> {
     public int size();
     public boolean isEmpty();
-    public Position<E> first();
-    public Position<E> last();
+    public Position<E> first() throws EmptyListException;
+    public Position<E> last() throws EmptyListException;
     public Position<E> next(Position<E> p)
             throws InvalidPositionException, BoundaryViolationException;
     public Position<E> prev(Position<E> p)
@@ -23,7 +23,7 @@ public interface PositionList<E> extends Iterable<E> {
             throws InvalidPositionException;
     public E remove(Position<E> p) throws InvalidPositionException;
     public E set(Position<E> p, E e) throws InvalidPositionException;
-    public Iterable<Position<E>> positions();
+    public Iterable<Position<E>> positions() throws EmptyListException;
     public Iterator<E> iterator();
 
 }

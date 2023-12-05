@@ -18,7 +18,6 @@ class SlidingWindow2 {
         int max_sum = 0;
         for (int i = 0; i < k; i++)
             max_sum += arr[i];
-
         // Compute sums of remaining windows by
         // removing first element of previous
         // window and adding last element of

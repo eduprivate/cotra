@@ -9,7 +9,7 @@ public class NodeSequence extends NodeList implements Sequence {
 
     @Override
     public Position atRank(int rank) throws BoundaryViolationException {
-        DNode node;
+        DNode<E> node;
         checkRank(rank);
 
         if(rank <= size()/2) {

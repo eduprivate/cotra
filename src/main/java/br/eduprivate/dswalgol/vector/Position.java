@@ -1,5 +1,5 @@
 package br.eduprivate.dswalgol.vector;
 
-public interface Position {
-    Object element();
+public interface Position<E> {
+    E element();
 }
