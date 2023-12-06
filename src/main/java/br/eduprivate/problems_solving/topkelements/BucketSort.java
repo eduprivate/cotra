@@ -4,7 +4,8 @@ import java.util.*;
 
 // see geeksforgeeks
 
-class BucketSort {
+class BucketSort{
+
 
     // Function to print the k numbers with most occurrences
     static void print_N_mostFrequentNumber(int arr[], int N,
@@ -24,7 +25,6 @@ class BucketSort {
         // Array to store the elements according
         // to their frequency
         List<List<Integer> > frequency = new ArrayList<>();
-
         for (int i = 0; i < N + 1; i++) {
             frequency.add(new ArrayList<>());
         }

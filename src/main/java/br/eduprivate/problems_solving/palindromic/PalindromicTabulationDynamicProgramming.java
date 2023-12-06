@@ -9,9 +9,8 @@ import java.util.*;
 class PalindromicTabulationDynamicProgramming {
     public static int longestPalinSubseq(String S)
     {
-        String R
-                = new StringBuilder(S).reverse().toString();
-
+        String R = new StringBuilder(S).reverse().toString();
+        System.out.println(R);
         // dp[i][j] will store the length of the longest
         // palindromic subsequence for the substring
         // starting at index i and ending at index j

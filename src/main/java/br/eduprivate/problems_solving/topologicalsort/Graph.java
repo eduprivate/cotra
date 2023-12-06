@@ -45,7 +45,7 @@ class Graph {
 
         // Push current vertex to stack
         // which stores result
-        stack.push(new Integer(v));
+        stack.push(v);
     }
 
     // The function to do Topological Sort.
