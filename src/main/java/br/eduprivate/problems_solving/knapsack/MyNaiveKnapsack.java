@@ -22,7 +22,6 @@ public class MyNaiveKnapsack {
             int weight = weights[i];
 
 
-
         }
         return true;
     }
