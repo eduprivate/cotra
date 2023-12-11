@@ -25,6 +25,52 @@ public class BinaryTree {
         return temp;
     }
 
+    void printInorder(BinaryTree node)
+    {
+        if (node == null)
+            return;
+
+        // First recur on left child
+        printInorder(node.left);
+
+        // Then print the data of node
+        System.out.print(node.data + " ");
+
+        // Now recur on right child
+        printInorder(node.right);
+    }
+
+    void printPreorder(BinaryTree node)
+    {
+        if (node == null)
+            return;
+
+        // First print data of node
+        System.out.print(node.data + " ");
+
+        // Then recur on left subtree
+        printPreorder(node.left);
+
+        // Now recur on right subtree
+        printPreorder(node.right);
+    }
+
+    // "bottom-up" postorder traversal.
+    void printPostorder(BinaryTree node)
+    {
+        if (node == null)
+            return;
+
+        // First recur on left subtree
+        printPostorder(node.left);
+
+        // Then recur on right subtree
+        printPostorder(node.right);
+
+        // Now deal with the node
+        System.out.print(node.data + " ");
+    }
+
     static boolean iterativeSearch(BinaryTree root, int key)
     {
         // Traverse until root reaches to dead end
