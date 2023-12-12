@@ -61,10 +61,10 @@ class BinaryTree {
 }
 
 
-public class TopKElements {
+public class TopKElementsBinaryTree {
 
     public BinaryTree parseFile(String file) throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("/home/cadu/desenvolvimento/sistema/workspace_study/cotra/src/main/java/br/eduprivate/problems_solving/logs"));
+        Scanner scanner = new Scanner(new File(file));
 
         BinaryTree binaryTree = new BinaryTree();
 
@@ -87,7 +87,7 @@ public class TopKElements {
     public static void main(String[] args) throws FileNotFoundException {
         String file = "logs";
         int n = 2;
-        TopKElements topKElements = new TopKElements();
+        TopKElementsBinaryTree topKElements = new TopKElementsBinaryTree();
         BinaryTree binaryTree = topKElements.parseFile(file);
 
         List<String> list = new ArrayList<>();
