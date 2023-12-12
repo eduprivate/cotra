@@ -7,7 +7,7 @@ import java.util.Stack;
 
 public class Graph {
     private int V;
-
+// 60 NE1 80 MGL1
     private ArrayList<ArrayList<Integer>> adj;
 
     Graph(int v)
