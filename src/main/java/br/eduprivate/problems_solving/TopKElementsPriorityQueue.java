@@ -83,7 +83,7 @@ public class TopKElementsPriorityQueue {
     }
 
     public static void main(String[] args) throws FileNotFoundException {
-        String file = "/home/cadu/desenvolvimento/sistema/workspace_study/cotra/src/main/java/br/eduprivate/problems_solving/logs";
+        String file = "logs";
         int n = 2;
         TopKElementsPriorityQueue topKElements = new TopKElementsPriorityQueue();
         PriorityQueue<MyEntry<String, Integer>> queue = topKElements.parseFile(file);
