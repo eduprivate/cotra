@@ -142,6 +142,9 @@ public class ArrayList<E> implements List<E> {
     data = temp;                               // start using the new array
   }
 
+  public void add(E element) {
+  }
+
   //---------------- nested ArrayIterator class ----------------
   /**
    * A (nonstatic) inner class. Note well that each instance contains an implicit
