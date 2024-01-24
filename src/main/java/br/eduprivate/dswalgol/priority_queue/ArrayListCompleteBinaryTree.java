@@ -101,7 +101,7 @@ public class ArrayListCompleteBinaryTree<E> implements CompleteBinaryTree<E> {
         return (BTPos<E>) p;
     }
 
-    private boolean hasRight(Position<E> p) {
+    public boolean hasRight(Position<E> p) {
         BTPos<E> vv = checkPosition(p);
         return 2*vv.index + 1 <= size();
     }
