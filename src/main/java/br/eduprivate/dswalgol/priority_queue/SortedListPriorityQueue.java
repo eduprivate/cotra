@@ -4,8 +4,10 @@ import br.eduprivate.dswalgol.net.datastructures.DefaultComparator;
 import br.eduprivate.dswalgol.net.datastructures.Entry;
 import br.eduprivate.dswalgol.net.datastructures.Position;
 import br.eduprivate.dswalgol.tree.gen.EmptyListException;
+import br.eduprivate.dswalgol.tree.gen.EmptyTreeException;
 import br.eduprivate.dswalgol.tree.gen.NodePositionList;
 import br.eduprivate.dswalgol.tree.gen.PositionList;
+import br.eduprivate.dswalgol.priority_queue.EmptyPriorityQueueException;
 
 import java.util.Comparator;
 
@@ -71,7 +73,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
     }
 
     @Override
-    public Entry<K, V> insert(K key, V value) throws EmptyPriorityQueueException, EmptyListException {
+    public Entry<K, V> insert(K key, V value) throws EmptyListException, InvalidKeyException {
         checkKey(key);
         Entry<K, V> entry = new MyEntry<>(key,value);
         insertEntry(entry);
@@ -79,7 +81,7 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
 
     }
 
-    private void insertEntry(Entry<K,V> entry) throws EmptyListException {
+    protected void insertEntry(Entry<K,V> entry) throws EmptyListException {
         if (entries.isEmpty()) {
             entries.addFirst(entry);
             actionPos = entries.first();
@@ -96,9 +98,9 @@ public class SortedListPriorityQueue<K, V> implements PriorityQueue<K, V> {
         }
     }
 
-    private void checkKey(K key) throws EmptyPriorityQueueException{
+    public void checkKey(K key) throws InvalidKeyException{
         if (key == null) {
-            throw new EmptyPriorityQueueException();
+            throw new InvalidKeyException();
         }
     }
 

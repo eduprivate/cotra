@@ -22,6 +22,10 @@
  */
 package br.eduprivate.dswalgol.net.datastructures;
 
+import br.eduprivate.dswalgol.priority_queue.InvalidEntryException;
+import br.eduprivate.dswalgol.priority_queue.InvalidKeyException;
+import br.eduprivate.dswalgol.tree.gen.EmptyListException;
+
 /**
  * Interface for the adaptable priority queue ADT. The Entry instance
  * returned by the insert method can later be used to remove the
@@ -39,7 +43,7 @@ public interface AdaptablePriorityQueue<K,V> extends PriorityQueue<K,V> {
    * @param entry  an entry of this priority queue
    * @throws IllegalArgumentException if e is not a valid entry for the priority queue.
    */
-  void remove(Entry<K,V> entry) throws IllegalArgumentException;
+  void remove(Entry<K,V> entry) throws IllegalArgumentException, InvalidEntryException;
 
   /**
    * Replaces the key of an entry.
@@ -48,7 +52,7 @@ public interface AdaptablePriorityQueue<K,V> extends PriorityQueue<K,V> {
    * @param key    the new key
    * @throws IllegalArgumentException if e is not a valid entry for the priority queue.
    */
-  void replaceKey(Entry<K,V> entry, K key) throws IllegalArgumentException;
+  void replaceKey(Entry<K,V> entry, K key) throws IllegalArgumentException, InvalidKeyException, InvalidEntryException, EmptyListException;
 
   /**
    * Replaces the value of an entry.
@@ -57,5 +61,5 @@ public interface AdaptablePriorityQueue<K,V> extends PriorityQueue<K,V> {
    * @param value  the new value
    * @throws IllegalArgumentException if e is not a valid entry for the priority queue.
    */
-  void replaceValue(Entry<K,V> entry, V value) throws IllegalArgumentException;
+  void replaceValue(Entry<K,V> entry, V value) throws IllegalArgumentException, InvalidEntryException;
 }

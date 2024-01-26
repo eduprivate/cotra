@@ -22,6 +22,9 @@
  */
 package br.eduprivate.dswalgol.net.datastructures;
 
+import br.eduprivate.dswalgol.priority_queue.InvalidKeyException;
+import br.eduprivate.dswalgol.tree.gen.EmptyListException;
+
 /**
  * Interface for the priority queue ADT.
  *
@@ -50,7 +53,7 @@ public interface PriorityQueue<K,V> {
    * @return the entry storing the new key-value pair
    * @throws IllegalArgumentException if the key is unacceptable for this queue
    */
-  Entry<K,V> insert(K key, V value) throws IllegalArgumentException;
+  Entry<K,V> insert(K key, V value) throws IllegalArgumentException, InvalidKeyException, EmptyListException;
 
   /**
    * Returns (but does not remove) an entry with minimal key.
