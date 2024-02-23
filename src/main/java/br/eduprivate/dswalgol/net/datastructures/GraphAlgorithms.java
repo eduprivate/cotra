@@ -22,6 +22,10 @@
  */
 package br.eduprivate.dswalgol.net.datastructures;
 
+import br.eduprivate.dswalgol.priority_queue.InvalidEntryException;
+import br.eduprivate.dswalgol.priority_queue.InvalidKeyException;
+import br.eduprivate.dswalgol.tree.gen.EmptyListException;
+
 import java.util.Set;
 import java.util.HashSet;
 
@@ -194,7 +198,7 @@ public class GraphAlgorithms {
    * The edge's element is assumed to be its integral weight.
    */
   public static <V> Map<Vertex<V>, Integer>
-  shortestPathLengths(Graph<V,Integer> g, Vertex<V> src) {
+  shortestPathLengths(Graph<V,Integer> g, Vertex<V> src) throws EmptyListException, InvalidKeyException, InvalidEntryException {
     // d.get(v) is upper bound on distance from src to v
     Map<Vertex<V>, Integer> d = new ProbeHashMap<>();
     // map reachable v to its d value
@@ -261,7 +265,7 @@ public class GraphAlgorithms {
    *
    * Result is returned as a list of edges that comprise the MST (in arbitrary order).
    */
-  public static <V> PositionalList<Edge<Integer>> MST(Graph<V,Integer> g) {
+  public static <V> PositionalList<Edge<Integer>> MST(Graph<V,Integer> g) throws EmptyListException, InvalidKeyException {
     // tree is where we will store result as it is computed
     PositionalList<Edge<Integer>> tree = new LinkedPositionalList<>();
     // pq entries are edges of graph, with weights as keys

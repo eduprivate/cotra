@@ -34,6 +34,11 @@
             <type>jar</type>
 		</dependency>
 		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.72.Final</version>
+		</dependency>
+		<dependency>
 		    <groupId>org.apache.lucene</groupId>
 		    <artifactId>lucene-core</artifactId>
 		    <version>7.1.0</version>

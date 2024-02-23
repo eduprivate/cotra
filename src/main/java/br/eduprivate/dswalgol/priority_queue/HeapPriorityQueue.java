@@ -71,7 +71,7 @@ public class HeapPriorityQueue<K, V> implements PriorityQueue<K, V> {
     }
 
     @Override
-    public Entry<K, V> insert(K key, V value) throws EmptyPriorityQueueException, EmptyListException, InvalidKeyException {
+    public Entry<K, V> insert(K key, V value) throws EmptyListException, InvalidKeyException {
         checkKey(key);
         Entry<K, V> entry = new MyEntry<K, V>(key, value);
         upHeap(heap.add(entry));

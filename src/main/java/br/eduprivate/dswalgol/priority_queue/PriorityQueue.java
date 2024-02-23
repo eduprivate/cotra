@@ -10,9 +10,9 @@ public interface PriorityQueue<K,V> {
 
     public boolean isEmpty();
 
-    public Entry<K, V> min() throws EmptyPriorityQueueException, EmptyListException;
+    public Entry<K, V> min() throws EmptyPriorityQueueException, EmptyListException, EmptyTreeException;
 
-    public Entry<K, V> insert(K key, V value) throws EmptyListException, InvalidKeyException;
+    public Entry<K, V> insert(K key, V value) throws EmptyListException, InvalidKeyException, java.security.InvalidKeyException;
 
     public Entry<K, V> removeMin() throws EmptyPriorityQueueException, EmptyListException, EmptyTreeException;
 

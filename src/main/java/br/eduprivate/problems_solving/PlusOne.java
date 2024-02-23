@@ -5,42 +5,16 @@ import java.util.Arrays;
 public class PlusOne {
 
     public int[] plusOne(int[] digits) {
-
-        int lastDigit = digits.length-1;
-        int digit = digits[lastDigit];
-
-        digit = digit+1;
-        if (digit == 10) {
-            int[] newDigits = new int[digits.length + 1];
-
-            for (int i = 1; i < newDigits.length; i++) {
-                newDigits[i] = digits[i-1];
+        for (int i = digits.length-1; i >=0 ; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
             }
-            digits = newDigits;
-
-            changeDigit(digits, lastDigit);
-        } else{
-            digits[lastDigit] = digit;
+            digits[i] = 0;
         }
 
-        return digits;
-    }
-
-    private void changeDigit(int[] digits, int i) {
-        if (i == 0) {
-            digits[i] = 1;
-            digits[i+1] = 0;
-        }
-        else {
-            int digit = digits[i]+1;
-            if (digit == 10) {
-                digits[i] = 0;
-                changeDigit(digits, i-1);
-            }
-            else{
-                digits[i] = digit;
-            }
-        }
+        int digits2[] = new int[digits.length + 1];
+        digits2[0] = 1;
+        return digits2;
     }
 
 
